@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.css">
+   
+    <title>JS-50</title>
+</head>
+<body>  
+    <div class="container">        
+        <!-- Example-1 Text Change-->
+        <button onclick="textChange()"  type="button" class="btn btn-primary">Click here to see my full name</button>
+        <h2 id="t_c">My nick name is Shafin</h2>
+        <hr>
+        <!-- Example-2 Play Music-->
+        <audio id="myMusic" src="resources/Alarm03.wav"></audio>
+        <button onclick="playMusic()"  type="button" class="btn btn-danger">Click here to play music</button>
+        <hr>
+        <!-- Example-26 Addition (Input from HTML)-->
+        <h6>Input Data from HTML</h6>
+        <input type="number" name="a" id="a"><br>
+        <input type="number" name="b" id="b"><br>
+        <button onclick="abAdd(a,b)" type="button" class="btn btn-primary">Click to See Result</button>  
+        <p id="ab_Add">Result Here</p>  
+        <hr>
+        <!-- Example-27 Pic Change-->
+        <h6>Click on image to change</h6>
+        <img src="images/Cat.jpg" width="150px" height="150px" onclick="picChange()">       
+        <hr>
+        <!-- Example-28 Click to Change Div Color-->
+        <h6>Click on rectangle to change color</h6>
+        <div id="rectangle" onclick="changeColor()"></div>     
+        <hr>
+        <!-- Example-29 Function-->
+        <h6>Click to convert from F to C</h6>
+        <input type="input" name="aa" id="fc"><br>
+        <button onclick="jFunc(fc)" type="button" class="btn btn-primary">Click to convert</button>  
+        <p id="f_cel">Result Here</p>  
+        <hr>
+        <!-- Example-30 Object Demo-->
+        <h6>Object Demo</h6>
+        <button onclick="returnObj()" type="button" class="btn btn-primary">Click for my name</button>  
+        <p id="demo">Result Here</p>  
+        <hr>
+        <!-- Example-31 Displaying Properties in a Loop-->
+        <h6>Displaying Properties in a Loop</h6>
+        <button onclick="disPro()" type="button" class="btn btn-primary">Click for detail</button>  
+        <p id="dis_pro">Result Here</p>  
+        <hr>
+        <!-- Example-3 Change Font Size-->
+        <p id="c_fs"> This text will change</p>
+        <button onclick="fontSizeChange()" type="button" class="btn btn-primary">Click to change font size</button>
+        <hr>
+        <!-- Example-4 Show/Hide-->
+        <p id="t_d">Hide/Show HTML element</p>
+        <button onclick="hideText()" type="button" class="btn btn-primary">Click to hide text</button>
+        <button onclick="showText()" type="button" class="btn btn-primary">Click to show text</button>     
+        <hr>
+        <!-- Example-5 Lower/Upper case-->
+        <p id="l_u">Lower/Upper HTML text</p>
+        <button onclick="toLower()" type="button" class="btn btn-primary">Click for lower case</button>
+        <button onclick="toUpper()" type="button" class="btn btn-primary">Click for upper case</button> 
+        <hr>
+        <!-- Example-6 Document.Write-->
+        <p id="d_w">Result Here</p>
+        <button onclick="docWrite()" type="button" class="btn btn-primary">Document.Write</button>    
+        <hr>
+        <!-- Example-7 Window Alert-->
+        <button onclick="showAlert()" type="button" class="btn btn-dark">Alert</button>    
+        <hr>
+        <!-- Example-8 Console Log-->
+        <button onclick="cLog()" type="button" class="btn btn-danger">Console</button>    
+        <hr>
+        <!-- Example-9 Window Print-->
+        <button onclick="wPrint()" type="button" class="btn btn-dark">Print</button>    
+        <hr>
+        <!-- Example-10 JS Variable-->
+        <button onclick="jVar()" type="button" class="btn btn-dark">Result</button>  
+        <p id="j_v">Result Here</p>  
+        <hr>
+        <!-- Example-11 Addition-->
+        <button onclick="jAdd()" type="button" class="btn btn-primary">Addition Result</button>  
+        <p id="j_a">Result Here</p>  
+        <hr>
+        <!-- Example-12 Incrementing-->
+        <button onclick="jInc()" type="button" class="btn btn-primary">Increment Result</button>  
+        <p id="i_r">Result Here</p>  
+        <hr>
+        <!-- Example-13 Decrementing-->
+        <button onclick="jDec()" type="button" class="btn btn-primary">Decrement Result</button>  
+        <p id="d_r">Result Here</p>  
+        <hr>
+        <!-- Example-14 Math Pow-->
+        <button onclick="mPow()" type="button" class="btn btn-primary">POW Result</button>  
+        <p id="p_r">Result Here</p>  
+        <hr>
+        <!-- Example-15 Operator Precedence-->
+        <button onclick="oPre()" type="button" class="btn btn-primary">OP Result</button>  
+        <p id="o_p">Result Here</p>  
+        <hr>
+        <!-- Example-16 Addition Assignment-->
+        <button onclick="aAss()" type="button" class="btn btn-primary">Addition Assignment</button>  
+        <p id="a_a">Result Here</p>  
+        <hr>
+        <!-- Example-17 Exponential Assignment-->
+        <button onclick="eAss()" type="button" class="btn btn-primary">Exponentiation Assignment</button>  
+        <p id="e_a">Result Here</p>  
+        <hr>  
+        <!-- Example-18 Division Assignment-->
+        <button onclick="dAss()" type="button" class="btn btn-primary">Division Assignment</button>  
+        <p id="d_a">Result Here</p>  
+        <hr> 
+        <!-- Example-19 Remainder Assignment-->
+        <button onclick="rAss()" type="button" class="btn btn-primary">Remainder Assignment</button>  
+        <p id="r_a">Result Here</p>  
+        <hr>
+        <!-- Example-20 Number String-->
+        <button onclick="nStr()" type="button" class="btn btn-primary">Number AND String</button>  
+        <p id="n_s">Result Here</p>  
+        <hr>
+        <!-- Example-21 Number String2-->
+        <button onclick="nStr2()" type="button" class="btn btn-primary">Number AND String2</button>  
+        <p id="n_s2">Result Here</p>  
+        <hr>
+        <!-- Example-22 Number String3-->
+        <button onclick="nStr3()" type="button" class="btn btn-primary">Number AND String3</button>  
+        <p id="n_s3">Result Here</p>  
+        <hr>
+        <!-- Example-23 Arrays-->
+        <button onclick="jArr()" type="button" class="btn btn-primary">Arrays[1]</button>  
+        <p id="j_arr">Result Here</p>  
+        <hr>
+        <!-- Example-24 Objects-->
+        <button onclick="jObj()" type="button" class="btn btn-primary">Object</button>  
+        <p id="j_obj">Result Here</p>  
+        <hr>
+        <!-- Example-25 Date-->
+        <button onclick="jDate()" type="button" class="btn btn-primary">The time is?</button>  
+        <p id="j_date">Result Here</p>  
+        <hr>
+    </div>
+
+    <script src="js/script.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
